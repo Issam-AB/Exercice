@@ -1,0 +1,238 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 100px;
+}
+
+.wrraper {
+  width: 100%;
+  padding: 37px;
+  border-radius: 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.box-section {
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.addButton {
+  font-size: 15px;
+  float: right;
+  background-color: #ffaa0a;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 6px;
+  color: #495057;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+.addButton:hover {
+  background-color: #b07300;
+  color: rgb(219, 217, 217);
+}
+
+.content-table thead th {
+  text-align: left;
+  padding: 20px;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+.deleteBtn {
+  margin-left: 16px;
+  color: red;
+  border: none;
+}
+
+.deleteBtn:hover {
+  color: rgb(80, 2, 2);
+}
+.on-validation > td > p {
+  font-size: 12px;
+  width: 5rem;
+  background-color: #fdb64d;
+  border: none;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+.valid > td > p {
+  font-size: 12px;
+  width: 5rem;
+  background-color: #5be881;
+  border: none;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+.rejected > td > p {
+  font-size: 12px;
+  width: 5rem;
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+.NoValid > td > p {
+  font-size: 12px;
+  width: 5rem;
+  background-color: #003049;
+  border: none;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  /* width: 500px; */
+  max-width: 100%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 22px 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .title {
+  font-size: 25px;
+  font-weight: 700;
+  font-style: "oblique";
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 0px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form-group {
+  display: flex;
+}
+.form-control {
+  padding: 17px 30px;
+}
+
+label {
+  font-size: 14px;
+  color: #898982;
+}
+span {
+  color: #ff0000;
+}
+input {
+  display: block;
+  width: 19rem;
+  height: 33px;
+  margin: 6px 0;
+  padding: 0.375rem 0.75rem;
+  /* color: #91918f;
+  background-color: #e4e3ea; */
+  outline: none;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  border: 1px solid #91918f;
+  transition: border 0.8s ease-in-out;
+}
+
+#btn-enregistrer {
+  font-size: 15px;
+  float: right;
+  margin: 15px;
+  background-color: #ffaa0a;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 6px;
+  color: #495057;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+#btn-enregistrer:hover {
+  background-color: #b07300;
+  color: rgb(219, 217, 217);
+}

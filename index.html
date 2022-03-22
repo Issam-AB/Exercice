@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="index.js"></script>
+    <script type="module" src="./data.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Exiercice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrraper">
+        <table class="content-table">
+          <thead>
+            <tr class="row head">
+              <th>ID</th>
+              <th>Date de creation</th>
+              <th>Etat</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Nom d'utilsateur</th>
+              <th>Matricule</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+      <div class="box-section">
+        <button data-modal-target="#modal" class="addButton" type="button">
+          Ajouter Utilisateur
+        </button>
+
+        <form class="modal" id="modal" type="submit">
+          <div class="modal-header">
+            <h2 class="title">Ajouter d'utilisateurs</h2>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <div class="form-control">
+                <label id="name-label" for="nom">Nom <span>*</span></label>
+                <input type="text" id="nom" required />
+              </div>
+
+              <div class="form-control">
+                <label id="name-label" for="prenom"
+                  >Prenom <span>*</span></label
+                >
+                <input type="text" id="prenom" required />
+              </div>
+              <div class="form-control">
+                <label id="name-label" for="status">Etat <span>*</span></label>
+                <input type="text" id="status" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <label id="name-label" for="nomUser"
+                  >Nom d'utilsateur <span>*</span></label
+                >
+                <input type="text" id="nomUser" required />
+              </div>
+              <div class="form-control">
+                <label id="name-label" for="dateCreation"
+                  >Date de creation <span>*</span></label
+                >
+                <input type="text" id="dateCreation" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <label id="name-label" for="matricule"
+                  >Matricule <span>*</span></label
+                >
+                <input type="text" id="matricule" required />
+              </div>
+            </div>
+            <button id="btn-enregistrer" type="submit">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+      <div id="overlay"></div>
+    </div>
+  </body>
+</html>
